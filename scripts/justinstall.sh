@@ -6,7 +6,7 @@ echo "Packaging tez rpm with name ${RPM_NAME} with version ${ALTISCALE_VERSION}-
 export RPM_BUILD_DIR=${INSTALL_DIR}/opt
 mkdir --mode=0755 -p ${RPM_BUILD_DIR}
 cd ${RPM_BUILD_DIR}
-tar -xvzpf ${WORKSPACE}/incubator-tez/tez-dist/target/tez-${TEZ_VERSION}-incubating-SNAPSHOT.tar.gz
+tar -xvzpf ${WORKSPACE}/incubator-tez/tez-dist/target/tez-${TEZ_VERSION}-incubating.tar.gz
 
 cd ${RPM_DIR}
 fpm --verbose \
@@ -23,4 +23,4 @@ fpm --verbose \
 --rpm-user root \
 --rpm-group root \
 -C ${INSTALL_DIR} \
-opt
+opt etc
