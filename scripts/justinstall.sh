@@ -23,4 +23,4 @@ fpm --verbose \
 --rpm-user root \
 --rpm-group root \
 -C ${INSTALL_DIR} \
-opt etc
+opt
