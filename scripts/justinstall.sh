@@ -7,7 +7,7 @@ export RPM_BUILD_DIR=${INSTALL_DIR}/opt
 mkdir --mode=0755 -p ${RPM_BUILD_DIR}
 mkdir --mode=0755 -p ${INSTALL_DIR}/etc/tez
 cd ${RPM_BUILD_DIR}
-tar -xvzpf ${WORKSPACE}/incubator-tez/tez-dist/target/tez-${TEZ_VERSION}-minimal.tar.gz
+tar -xvzpf ${WORKSPACE}/tez/tez-dist/target/tez-${TEZ_VERSION}-minimal.tar.gz
 
 cd ${RPM_DIR}
 fpm --verbose \
