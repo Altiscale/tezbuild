@@ -1,3 +1,3 @@
-[submodule "incubator-tez"]
-	path = incubator-tez
-	url = https://github.com/Altiscale/incubator-tez.git
+[submodule "tez"]
+	path = tez
+	url = https://github.com/Altiscale/tez.git
