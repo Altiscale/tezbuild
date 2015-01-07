@@ -7,7 +7,7 @@ export RPM_BUILD_DIR=${INSTALL_DIR}/opt/tez-${TEZ_VERSION}
 mkdir --mode=0755 -p ${RPM_BUILD_DIR}
 mkdir --mode=0755 -p ${INSTALL_DIR}/etc/tez
 cd ${RPM_BUILD_DIR}
-export $DIST_DIR=${WORKSPACE}/tez/tez-dist/target
+export DIST_DIR=${WORKSPACE}/tez/tez-dist/target
 mkdir --mode=0755 lib
 cp -a ${DISTDIR}/tez-${TEZ_VERSION}/ lib
 cp ${DISTDIR}/tez-${TEZ_VERSION}.tar.gz .
