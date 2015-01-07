@@ -9,9 +9,9 @@ mkdir --mode=0755 -p ${INSTALL_DIR}/etc/tez
 cd ${RPM_BUILD_DIR}
 export DIST_DIR=${WORKSPACE}/tez/tez-dist/target
 mkdir --mode=0755 lib
-cp -a ${DISTDIR}/tez-${TEZ_VERSION}/ lib
-cp ${DISTDIR}/tez-${TEZ_VERSION}.tar.gz .
-cp ${DISTDIR}/tez-${TEZ_VERSION}-minimal.tar.gz .
+cp -a ${DIST_DIR}/tez-${TEZ_VERSION}/ lib
+cp ${DIST_DIR}/tez-${TEZ_VERSION}.tar.gz .
+cp ${DIST_DIR}/tez-${TEZ_VERSION}-minimal.tar.gz .
 rm -rf ${INSTALL_DIR}/opt/tez
 ln -s $RPM_BUILD_DIR ${INSTALL_DIR}/opt/tez
 
