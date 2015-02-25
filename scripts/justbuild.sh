@@ -1,3 +1,3 @@
 #!/bin/sh -ex
-# compile and package the Tez
+# package tez using maven, maven
 mvn package -Dtar -Dhadoop.version=${HADOOP_VERSION} -DskipTests -Dmaven.javadoc.skip=true
