@@ -12,6 +12,7 @@ mkdir --mode=0755 lib
 tar -xvzf ${DIST_DIR}/tez-${TEZ_VERSION}-minimal.tar.gz -C lib
 cp ${DIST_DIR}/tez-${TEZ_VERSION}.tar.gz .
 cp ${DIST_DIR}/tez-${TEZ_VERSION}-minimal.tar.gz .
+cp -a ${WORKSPACE}/tez/tez-tools/swimlanes .
 rm -rf ${INSTALL_DIR}/opt/tez
 
 cd ${RPM_DIR}
