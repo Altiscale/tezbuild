@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 ALTISCALE_RELEASE=${ALTISCALE_RELEASE:-0.1.0}
-export RPM_NAME=`echo vcc-tez-${ARTIFACT_VERSION}`
+export RPM_NAME=`echo alti-tez-${ARTIFACT_VERSION}`
 echo "Packaging tez rpm with name ${RPM_NAME} with version ${ALTISCALE_VERSION}-${DATE_STRING}"
 
 export RPM_BUILD_DIR=${INSTALL_DIR}/opt/tez-${TEZ_VERSION}
@@ -20,7 +20,7 @@ fpm --verbose \
 --vendor VertiCloud \
 --provides ${RPM_NAME} \
 --description "${DESCRIPTION}" \
---replaces vcc-tez-${ARTIFACT_VERSION} \
+--replaces alti-tez-${ARTIFACT_VERSION} \
 -s dir \
 -t rpm \
 -n ${RPM_NAME} \
