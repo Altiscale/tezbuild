@@ -1,6 +1,7 @@
 #!/bin/sh -ex
 ALTISCALE_RELEASE=${ALTISCALE_RELEASE:-0.1.0}
 export RPM_NAME=`echo alti-tez-${ARTIFACT_VERSION}`
+export RPM_DESCRIPTION="Apache Tez ${ARTIFACT_VERSION}\n\n${DESCRIPTION}"
 echo "Packaging tez rpm with name ${RPM_NAME} with version ${ALTISCALE_VERSION}-${DATE_STRING}"
 
 export RPM_BUILD_DIR=${INSTALL_DIR}/opt/tez-${TEZ_VERSION}
@@ -16,11 +17,13 @@ rm -rf ${INSTALL_DIR}/opt/tez
 
 cd ${RPM_DIR}
 fpm --verbose \
---maintainer ops@verticloud.com \
---vendor VertiCloud \
+--maintainer support@altiscale.com \
+--vendor Altiscale \
 --provides ${RPM_NAME} \
---description "${DESCRIPTION}" \
+--description "${RPM_DESCRIPTION}" \
 --replaces alti-tez-${ARTIFACT_VERSION} \
+--url "${GITREPO}" \
+--license "Apache License v2" \
 -s dir \
 -t rpm \
 -n ${RPM_NAME} \
