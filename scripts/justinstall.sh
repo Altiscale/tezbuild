@@ -23,6 +23,7 @@ fpm --verbose \
 --provides ${RPM_NAME} \
 --description "${RPM_DESCRIPTION}" \
 --replaces alti-tez-${ARTIFACT_VERSION} \
+--replaces vcc-tez \
 --url "${GITREPO}" \
 --license "Apache License v2" \
 -s dir \
