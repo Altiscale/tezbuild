@@ -6,7 +6,7 @@ echo "Packaging tez rpm with name ${RPM_NAME} with version ${ALTISCALE_VERSION}-
 
 export RPM_BUILD_DIR=${INSTALL_DIR}/opt/tez-${TEZ_VERSION}
 mkdir --mode=0755 -p ${RPM_BUILD_DIR}
-mkdir --mode=0755 -p ${INSTALL_DIR}/etc/tez
+mkdir --mode=0755 -p ${INSTALL_DIR}/etc/tez-${TEZ_VERSION}
 cd ${RPM_BUILD_DIR}
 export DIST_DIR=${WORKSPACE}/tez/tez-dist/target
 mkdir --mode=0755 lib
@@ -21,7 +21,7 @@ fpm --verbose \
 --maintainer support@altiscale.com \
 --vendor Altiscale \
 --provides ${RPM_NAME} \
---description "${RPM_DESCRIPTION}" \
+--description "$(printf "${RPM_DESCRIPTION}")" \
 --replaces alti-tez-${ARTIFACT_VERSION} \
 --replaces vcc-tez \
 --url "${GITREPO}" \
