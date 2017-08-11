@@ -26,6 +26,7 @@ fpm --verbose \
 --replaces vcc-tez \
 --url "${GITREPO}" \
 --license "Apache License v2" \
+--epoch 1 \
 -s dir \
 -t rpm \
 -n ${RPM_NAME} \
